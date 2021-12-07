@@ -5,6 +5,7 @@
         height: 100%;
         padding: 0;
         margin: 0;
+        font-family: Arial, Helvetica, sans-serif;
     }
     body {
         display: flex;
@@ -15,19 +16,38 @@
         color: #fff;
         text-shadow: 0 0 3px #333;
     }
-    h1 {
+    h1,
+    #days {
         font-size: 96px;
     }
     h2 {
         font-size: 64px;
     }
     .small {
-        font-size: 32px;
+        font-size: 28px;
+    }
+    .beat {
+        animation: beat 1s infinite;
+        display: inline-block;
+    }
+    @keyframes beat {
+        0% {
+            transform: scale(1);
+        }
+        20% {
+            transform: scale(1.1);
+        }
+        40% {
+            transform: scale(1);
+        }
+        100% {
+            transform: scale(1);
+        }
     }
 </style>
 <div>
-<h1>🐏❤️🐇</h1>
-<h2><span id="days"></span><span class="small">DAYS</span> <span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span></h2>
+<h1>🐏&nbsp;<span class="beat">❤️</span>&nbsp;🐇</h1>
+<h2><span id="days"></span><span class="small">&nbsp;DAYS</span> <span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span></h2>
 </div>
 <script>
     const $days = document.getElementById('days');
