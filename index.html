@@ -30,6 +30,14 @@
         animation: beat 1s infinite;
         display: inline-block;
     }
+    #sheep {
+        animation: jump 2s infinite;
+        display: inline-block;
+    }
+    #rabbit {
+        animation: jump 2s 1s infinite;
+        display: inline-block;
+    }
     @keyframes beat {
         0% {
             transform: scale(1);
@@ -44,9 +52,30 @@
             transform: scale(1);
         }
     }
+    
+    @keyframes jump {
+        0% {
+            transform: translateY(0);
+        }
+        5% {
+            transform: translateY(-10%);
+        }
+        10% {
+            transform: translateY(0);
+        }
+        15% {
+            transform: translateY(-10%);
+        }
+        20% {
+            transform: translateY(0);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
 </style>
 <div>
-<h1>🐏&nbsp;<span class="beat">❤️</span>&nbsp;🐇</h1>
+<h1><span id="sheep">🐏</span>&nbsp;<span class="beat">❤️</span>&nbsp;<span id="rabbit">🐇</span></h1>
 <h2><span id="days"></span><span class="small">&nbsp;DAYS</span> <span id="hours"></span>:<span id="minutes"></span>:<span id="seconds"></span></h2>
 </div>
 <script>
