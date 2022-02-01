@@ -67,6 +67,7 @@ setInterval(() => {
   animation jump 2s infinite
   right 52%
 .clock
+  font-size 0
   box-shadow: 0 0 3px #f9d
   position: relative
   padding .2rem
