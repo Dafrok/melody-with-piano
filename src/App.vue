@@ -27,7 +27,7 @@ async function kill() {
           method: 'POST',
           body: 'kill my love'
         });
-        const txt = resp.text();
+        const txt = await resp.text();
         if (txt === 'killed') {
           status.value = 2;
         }
