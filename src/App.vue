@@ -41,7 +41,6 @@ async function kill() {
 <template>
 <main v-if="status === 1">
   <Clock />
-  <div class="kill" @click="kill">KILL LOVE</div>
 </main>
 <div v-if="status === 2" style="font-size: 16px;">
 404 Error: Can't found his love. 
